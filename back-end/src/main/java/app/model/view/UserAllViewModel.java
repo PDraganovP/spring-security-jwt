@@ -1,16 +1,17 @@
-package app.model.binding;
+package app.model.view;
 
 import java.util.Set;
 
-public class UserServiceModel {
+public class UserAllViewModel {
+
     private String id;
     private String username;
     private String password;
     private String email;
 
-    private Set<RoleServiceModel> authorities;
+    private Set<String> authorities;
 
-    public UserServiceModel() {
+    public UserAllViewModel() {
     }
 
     public String getId() {
@@ -45,11 +46,11 @@ public class UserServiceModel {
         this.email = email;
     }
 
-    public Set<RoleServiceModel> getAuthorities() {
+    public Set<String> getAuthorities() {
         return authorities;
     }
 
-    public void setAuthorities(Set<RoleServiceModel> authorities) {
+    public void setAuthorities(Set<String> authorities) {
         this.authorities = authorities;
     }
 }

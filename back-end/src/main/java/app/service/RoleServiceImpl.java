@@ -1,7 +1,7 @@
 package app.service;
 
 import app.entities.Role;
-import app.model.binding.RoleServiceModel;
+import app.model.service.RoleServiceModel;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

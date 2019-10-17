@@ -1,4 +1,4 @@
-package app.model;
+package app.model.view;
 
 public class Message {
     private String message;

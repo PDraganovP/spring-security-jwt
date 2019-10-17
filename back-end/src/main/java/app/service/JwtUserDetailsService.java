@@ -1,7 +1,7 @@
 package app.service;
 
 import app.entities.User;
-import app.model.binding.UserServiceModel;
+import app.model.service.UserServiceModel;
 import app.repository.UserRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,7 +41,6 @@ public class JwtUserDetailsService implements UserService {
             userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_USER"));
         }
 
-
         User user = this.modelMapper.map(userServiceModel, User.class);
         user.setPassword(this.bCryptPasswordEncoder.encode(userServiceModel.getPassword()));
 
@@ -77,6 +76,17 @@ public class JwtUserDetailsService implements UserService {
         user.setEmail(userServiceModel.getEmail());
 
         return this.modelMapper.map(this.userRepository.saveAndFlush(user), UserServiceModel.class);
+    }
+
+    @Override
+    public boolean deleteUserById(String id) {
+        try {
+            this.userRepository.deleteById(id);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     @Override

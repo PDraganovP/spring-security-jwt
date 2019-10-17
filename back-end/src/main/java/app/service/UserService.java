@@ -1,6 +1,6 @@
 package app.service;
 
-import app.model.binding.UserServiceModel;
+import app.model.service.UserServiceModel;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 import java.util.List;
@@ -16,4 +16,6 @@ public interface UserService extends UserDetailsService {
     List<UserServiceModel> findAllUsers();
 
     void setUserRole(String id, String role);
+
+    boolean deleteUserById(String id);
 }

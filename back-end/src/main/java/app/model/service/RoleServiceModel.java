@@ -1,4 +1,4 @@
-package app.model.binding;
+package app.model.service;
 
 public class RoleServiceModel {
     private String id;

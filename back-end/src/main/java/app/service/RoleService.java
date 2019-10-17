@@ -1,6 +1,6 @@
 package app.service;
 
-import app.model.binding.RoleServiceModel;
+import app.model.service.RoleServiceModel;
 
 import java.util.Set;
 

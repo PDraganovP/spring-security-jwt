@@ -1,4 +1,4 @@
-package app.model.binding;
+package app.model.view;
 
 public class UserProfileViewModel {
     private String username;

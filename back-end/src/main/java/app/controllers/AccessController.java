@@ -1,6 +1,6 @@
 package app.controllers;
 
-import app.model.Message;
+import app.model.view.Message;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AccessController {
 
     @RequestMapping(value = {"/unauthorized"}, method = RequestMethod.GET)
-    public ResponseEntity<?> hey() {
+    public ResponseEntity<?> getUnauthorizedMessage() {
 
         Message message = new Message() {{
             setMessage("You are unauthorized");
